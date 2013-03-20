@@ -1,6 +1,5 @@
 from __future__ import with_statement
 from functools import wraps
-import random
 import socket
 import time
 
