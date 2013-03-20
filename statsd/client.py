@@ -80,10 +80,7 @@ class StatsClient(object):
 
     def _prepare(self, stat, value, rate=1):
         if rate < 1:
-            if random.random() < rate:
-                value = '%s|@%s' % (value, rate)
-            else:
-                return
+            value = '%s|@%s' % (value, rate)
 
         if self._prefix:
             stat = '%s.%s' % (self._prefix, stat)
